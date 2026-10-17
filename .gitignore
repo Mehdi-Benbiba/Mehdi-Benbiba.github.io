@@ -1,0 +1,16 @@
+.DS_Store
+Thumbs.db
+.vscode/
+__pycache__/
+*.pyc
+*.log
+.env
+.env.*
+# Local visual QA captures, not used by the website
+preview-*.jpg
+preview-*.png
+.local/
+.research/
+*.tmp
+# Generated public folder and ZIP; rebuilt from the saved source.
+deployment/

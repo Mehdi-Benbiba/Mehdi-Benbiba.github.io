@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "revision": "619142f0-dd5d-40ad-8904-f6bd99da778a",
+  "profile": {
+    "name": "Mehdi Benbiba",
+    "role": "Junior BI & Data Analyst",
+    "intro": "I’m a BI Developer working on client projects in a consulting environment. My work includes Power BI reports, data models, and Microsoft Fabric pipelines.",
+    "about": "I’m a BI Developer with a Master’s degree in Decision Engineering. I have hands-on experience delivering business intelligence solutions for international clients in a BI consulting environment.\n\nI work on sales and operational reporting, from data preparation and warehouse development to Power BI reports and role-based access.",
+    "focus": "My current focus is data modeling, Microsoft Fabric, and end-to-end decision-support systems.",
+    "currentWork": "Building Power BI reports and dashboards\nDeveloping dataflows and data pipelines with Microsoft Fabric\nWorking with data warehouses and analytical data models\nPreparing data with Power Query, SQL, Python, and PySpark\nAutomating Power BI data refreshes\nConnecting SharePoint, Salesforce, Odoo, and other business systems",
+    "education": "Master’s degree in Decision Engineering",
+    "skills": "BI & Analytics: Power BI, DAX, Microsoft Fabric\nData: Excel, SQL, Python, Pandas, PySpark\nData Platforms: Fabric Data Warehouse, Lakehouse, Dataflows Gen2, Pipelines\nMachine Learning: Python, scikit-learn, Statsmodels",
+    "linkedin": "https://www.linkedin.com/in/mehdi-benbiba/",
+    "github": "https://github.com/Mehdi-Benbiba",
+    "medium": "https://medium.com/@mehdibenbiba",
+    "certifications": [
+      "DataCamp — Data Analyst with SQL",
+      "DataCamp — Data Analyst with Python",
+      "Google — Google Data Analytics Professional Certificate",
+      "Microsoft — Microsoft Power BI Data Analyst Professional Certificate"
+    ]
+  },
+  "projects": [
+    {
+      "id": "globotech-electronics",
+      "title": "GloboTech Electronics",
+      "category": "Sales analytics",
+      "summary": "Retail sales, customer behavior, and product profitability across stores and regions, 2016–2022.",
+      "url": "https://github.com/Mehdi-Benbiba/GloboTech-Electronics",
+      "featured": true,
+      "image": "assets/images/globotech.png",
+      "tools": [
+        "Power BI",
+        "Data modeling",
+        "Sales analysis"
+      ],
+      "challenge": "Bring sales, customer, product, category, and store data together to help leadership understand performance across an international retail business.",
+      "approach": "Analyze the linked business tables and present the results through Power BI views covering overall performance, customer segments, store size, geography, and product profitability.",
+      "insights": "The report surfaces the contribution of large-format stores, repeat purchasing, and high-performing product categories. The repository includes findings and recommendations for portfolio, customer, and geographic strategy."
+    },
+    {
+      "id": "veracare-health",
+      "title": "VeraCare Health",
+      "category": "Marketing analytics",
+      "summary": "Campaign performance and acquisition costs, with recommendations for marketing budget allocation.",
+      "url": "https://github.com/Mehdi-Benbiba/VeraCare-Health-Marketing-Performance",
+      "featured": true,
+      "image": "assets/images/veracare.png",
+      "tools": [
+        "Power BI",
+        "Power Query",
+        "Marketing analysis"
+      ],
+      "challenge": "Understand which campaign categories and acquisition channels support customer signups and brand awareness, and identify where future marketing budgets could be better allocated.",
+      "approach": "Explore campaign, customer, claims, and date tables. Compare signup rates, cost per signup, click-through rates, and cost per impression in a Power BI report and supporting presentation.",
+      "insights": "The analysis compares the efficiency of email, social media, SEO, and TV, then connects those differences to recommendations on campaign focus and channel allocation. The complete reasoning and presentation are available in the repository."
+    },
+    {
+      "id": "power-electro",
+      "title": "Power Electro",
+      "category": "E-commerce analytics",
+      "summary": "E-commerce sales trends, product mix, loyalty, and marketing channels, 2019–2022.",
+      "url": "https://github.com/Mehdi-Benbiba/Power-Electro-Analysis",
+      "featured": true,
+      "image": "assets/images/power-electro.png",
+      "tools": [
+        "Power BI",
+        "Excel",
+        "Exploratory analysis"
+      ],
+      "challenge": "Turn underused order and customer data into recommendations for sales, product, and marketing teams at an electronics e-commerce retailer.",
+      "approach": "Explore orders, order status, customers, geography, and a date dimension. Use dashboard views to examine revenue, average order value, refunds, product mix, and loyalty across time and markets.",
+      "insights": "The project examines the 2020 sales peak and the subsequent decline, alongside product concentration, loyalty performance, and channel differences. Recommendations and detailed analysis are documented in the repository."
+    }
+  ],
+  "blogs": [
+    {
+      "id": "choose-the-right-chart",
+      "title": "How to Choose the Right Chart: 8 Categories That Make It Simple",
+      "category": "Data visualization",
+      "summary": "A practical guide to choosing charts by the analytical question you need to answer, using eight categories to organize the options.",
+      "url": "https://medium.com/@mehdibenbiba/how-to-choose-the-right-chart-8-categories-that-make-it-simple-aa81dda8cc94",
+      "featured": true,
+      "image": "assets/images/blog-choose-right-chart.png",
+      "date": "2025-08-12"
+    },
+    {
+      "id": "data-storytelling-blueprint",
+      "title": "The Data Storytelling Blueprint That Will Set You Apart as an Analyst",
+      "category": "Data storytelling",
+      "summary": "A framework for structuring an analytical presentation around its purpose, evidence, and conclusion so the audience can follow the story.",
+      "url": "https://medium.com/@mehdibenbiba/the-data-storytelling-blueprint-that-will-set-you-apart-as-an-analyst-75dabf95e091",
+      "featured": true,
+      "image": "assets/images/blog-data-storytelling.png",
+      "date": "2025-08-04"
+    },
+    {
+      "id": "data-cleaning-framework",
+      "title": "From Chaos to Clarity: A High-Level Framework for Data Cleaning Every Analyst Should Know",
+      "category": "Data preparation",
+      "summary": "The CLEAN framework: understand your dataset, locate issues, evaluate the difficult cases, augment the data, and document your decisions.",
+      "url": "https://medium.com/@mehdibenbiba/from-chaos-to-clarity-a-high-level-framework-for-data-cleaning-every-analyst-should-know-0eb55923ae63",
+      "featured": true,
+      "image": "assets/images/blog-data-cleaning.png",
+      "date": "2025-05-14"
+    },
+    {
+      "id": "practical-eda",
+      "title": "A Practical Framework for Exploratory Data Analysis (EDA)",
+      "category": "Exploratory analysis",
+      "summary": "Break a business request into focused questions, select useful analytical techniques, and turn exploration into findings you can explain.",
+      "url": "https://medium.com/@mehdibenbiba/a-practical-framework-for-exploratory-data-analysis-eda-0bb07fd9e3f2",
+      "featured": false,
+      "image": "assets/images/blog-practical-eda.png",
+      "date": "2025-05-10"
+    }
+  ],
+  "contact": {
+    "formId": ""
+  }
+}
