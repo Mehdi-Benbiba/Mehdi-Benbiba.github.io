@@ -1,10 +1,10 @@
 window.PORTFOLIO_CONTENT = {
   "version": 1,
-  "revision": "dc65b62c-e86c-4543-9927-b7ebf6efa66c",
+  "revision": "06e6cfd6-692f-4cde-b452-e5d78e12453a",
   "profile": {
     "name": "Mehdi Benbiba",
     "role": "Business Intelligence Developer",
-    "intro": "I build Power BI reports and data models, and develop Microsoft Fabric pipelines that prepare business data for analysis.",
+    "intro": "I’m a BI Intern at Infinity Analytics, where I build Power BI reports and data models and develop Microsoft Fabric pipelines for client projects.",
     "about": "I’m a BI Developer with a Master’s degree in Decision Engineering. I have hands-on experience delivering business intelligence solutions for international clients in a BI consulting environment.\n\nI work on sales and operational reporting, from data preparation and warehouse development to Power BI reports and role-based access.",
     "focus": "My current focus is data modeling, Microsoft Fabric, and end-to-end decision-support systems.",
     "currentWork": "Building Power BI reports and dashboards\nDeveloping dataflows and data pipelines with Microsoft Fabric\nWorking with data warehouses and analytical data models\nPreparing data with Power Query, SQL, Python, and PySpark\nAutomating Power BI data refreshes\nConnecting SharePoint, Salesforce, Odoo, and other business systems",
