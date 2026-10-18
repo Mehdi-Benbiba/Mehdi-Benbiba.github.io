@@ -240,3 +240,16 @@ main:focus{outline:none}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 .card-action{font-size:10px;font-weight:600;color:var(--navy);margin-top:20px}.field input:disabled,.field textarea:disabled{background:var(--surface);color:var(--muted);border-color:var(--line)}
 .brand-mark{background:var(--navy);color:var(--white);border-color:var(--navy);border-radius:7px}.brand-mark svg{width:22px;height:22px}@media(max-width:820px){.brand-mark svg{width:19px;height:19px}}
+
+.experience-section{padding-top:20px}
+.experience-card{padding:32px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+.experience-header{display:flex;justify-content:space-between;align-items:start;gap:24px;padding-bottom:19px;border-bottom:1px solid var(--line)}
+.experience-header h3{font-size:19px}
+.experience-separator{color:#8793a4;font-weight:400}
+.experience-company-meta{margin-top:5px;color:var(--muted);font-size:12px}
+.experience-date{color:var(--navy);font-size:12px;font-weight:600;white-space:nowrap}
+.experience-summary{margin-top:20px;color:var(--muted);font-size:13px;line-height:1.85}
+.experience-highlights{display:grid;gap:12px;margin:18px 0 0;padding-left:20px;color:var(--muted);font-size:12px;line-height:1.9}
+.experience-highlights li{padding-left:4px}
+.experience-highlights li::marker{color:var(--navy)}
+@media(max-width:640px){.experience-card{padding:22px}.experience-header{flex-direction:column;gap:8px}.experience-date{font-size:11px}.experience-summary{font-size:12px}.experience-highlights{font-size:11px;gap:10px}}
