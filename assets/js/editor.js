@@ -54,7 +54,7 @@
     $('entry-dialog-title').textContent = (item ? 'Edit ' : 'Add new ') + (project ? 'project' : 'blog post'); $('save-entry').textContent = project ? 'Save project' : 'Save blog post';
     document.querySelectorAll('.project-only').forEach(e => e.hidden = !project); document.querySelectorAll('.blog-only').forEach(e => e.hidden = project);
     ['title', 'category', 'url', 'summary', 'image', 'challenge', 'approach', 'insights', 'date'].forEach(key => $('entry-' + key).value = item?.[key] || '');
-    $('entry-project-group').value = item?.projectGroup || 'data-analysis'; $('entry-tools').value = item?.tools?.join(', ') || ''; $('entry-featured').checked = item ? item.featured : true;
+    $('entry-project-group').value = item?.projectGroup || 'data-analysis'; $('entry-embed-url').value = item?.embedUrl || ''; $('entry-tools').value = item?.tools?.join(', ') || ''; $('entry-featured').checked = item ? item.featured : true;
     $('entry-image-preview').hidden = !item?.image; if (item?.image) $('entry-image-preview').src = item.image;
     $('entry-dialog').showModal();
   }
@@ -69,7 +69,7 @@
     try {
       const entry = {id: editingId || crypto.randomUUID(), featured: $('entry-featured').checked};
       ['title', 'category', 'url', 'summary', 'image'].forEach(key => entry[key] = $('entry-' + key).value.trim());
-      if (section === 'projects') { entry.projectGroup = $('entry-project-group').value; entry.tools = $('entry-tools').value.split(',').map(text => text.trim()).filter(Boolean); ['challenge', 'approach', 'insights'].forEach(key => entry[key] = $('entry-' + key).value.trim()); }
+      if (section === 'projects') { entry.projectGroup = $('entry-project-group').value; entry.embedUrl = $('entry-embed-url').value.trim(); entry.tools = $('entry-tools').value.split(',').map(text => text.trim()).filter(Boolean); ['challenge', 'approach', 'insights'].forEach(key => entry[key] = $('entry-' + key).value.trim()); }
       else entry.date = $('entry-date').value;
       const file = $('entry-image-file').files[0];
       if (file) { const encoded = await new Promise((resolve, reject) => { const reader = new FileReader(); reader.onload = () => resolve(reader.result); reader.onerror = () => reject(new Error('The image could not be read.')); reader.readAsDataURL(file); }); entry.image = (await request('/api/upload', {data: encoded})).path; }

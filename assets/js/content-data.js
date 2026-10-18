@@ -1,6 +1,6 @@
 window.PORTFOLIO_CONTENT = {
   "version": 1,
-  "revision": "619142f0-dd5d-40ad-8904-f6bd99da778a",
+  "revision": "5a36dc59-ea81-4a49-aac1-0555811c116d",
   "profile": {
     "name": "Mehdi Benbiba",
     "role": "Business Intelligence Developer",
@@ -23,13 +23,14 @@ window.PORTFOLIO_CONTENT = {
   "projects": [
     {
       "id": "globotech-electronics",
-      "projectGroup": "data-analysis",
       "title": "GloboTech Electronics",
       "category": "Sales Analysis",
       "summary": "Retail sales, customer behavior, and product profitability across stores and regions, 2016–2022.",
       "url": "https://github.com/Mehdi-Benbiba/GloboTech-Electronics",
       "featured": true,
       "image": "assets/images/globotech.png",
+      "projectGroup": "data-analysis",
+      "embedUrl": "",
       "tools": [
         "Power BI",
         "Data modeling",
@@ -41,13 +42,14 @@ window.PORTFOLIO_CONTENT = {
     },
     {
       "id": "veracare-health",
-      "projectGroup": "data-analysis",
       "title": "VeraCare Health",
       "category": "Marketing Analysis",
       "summary": "Campaign performance and acquisition costs, with recommendations for marketing budget allocation.",
       "url": "https://github.com/Mehdi-Benbiba/VeraCare-Health-Marketing-Performance",
       "featured": true,
       "image": "assets/images/veracare.png",
+      "projectGroup": "data-analysis",
+      "embedUrl": "",
       "tools": [
         "Power BI",
         "Power Query",
@@ -59,13 +61,14 @@ window.PORTFOLIO_CONTENT = {
     },
     {
       "id": "power-electro",
-      "projectGroup": "data-analysis",
       "title": "Power Electro",
       "category": "E-commerce Analysis",
       "summary": "E-commerce sales trends, product mix, loyalty, and marketing channels, 2019–2022.",
       "url": "https://github.com/Mehdi-Benbiba/Power-Electro-Analysis",
       "featured": true,
       "image": "assets/images/power-electro.png",
+      "projectGroup": "data-analysis",
+      "embedUrl": "",
       "tools": [
         "Power BI",
         "Excel",
@@ -74,6 +77,23 @@ window.PORTFOLIO_CONTENT = {
       "challenge": "Turn underused order and customer data into recommendations for sales, product, and marketing teams at an electronics e-commerce retailer.",
       "approach": "Explore orders, order status, customers, geography, and a date dimension. Use dashboard views to examine revenue, average order value, refunds, product mix, and loyalty across time and markets.",
       "insights": "The project examines the 2020 sales peak and the subsequent decline, alongside product concentration, loyalty performance, and channel differences. Recommendations and detailed analysis are documented in the repository."
+    },
+    {
+      "id": "retail-sales-dashboard",
+      "title": "Retail Sales Dashboard",
+      "category": "Sales Dashboard",
+      "summary": "Interactive Power BI report for exploring retail sales, profit margin, order volume, and customer performance across regions and products.",
+      "url": "https://app.powerbi.com/view?r=eyJrIjoiZjM4NTIyMzctOWM3Yi00YzJiLWFkZTQtMzEwMmU0MmY2ODNjIiwidCI6IjNjYzA1NTE2LWQ3NmEtNDI4Mi05N2NkLWI0N2RhNTNhODgyNiIsImMiOjF9",
+      "featured": false,
+      "image": "",
+      "projectGroup": "power-bi-development",
+      "embedUrl": "https://app.powerbi.com/view?r=eyJrIjoiZjM4NTIyMzctOWM3Yi00YzJiLWFkZTQtMzEwMmU0MmY2ODNjIiwidCI6IjNjYzA1NTE2LWQ3NmEtNDI4Mi05N2NkLWI0N2RhNTNhODgyNiIsImMiOjF9",
+      "tools": [
+        "Power BI"
+      ],
+      "challenge": "Make retail sales, profit margin, and order activity easy to review across time, geography, customers, and products.",
+      "approach": "Built an interactive Power BI report with filters for year, month, region, city, customer, category, and product. KPI cards and charts support comparisons across sales, order quantity, profitability, and regional and monthly trends.",
+      "insights": "The report brings headline KPIs, regional and monthly trends, and customer and product views into one interactive experience."
     }
   ],
   "blogs": [

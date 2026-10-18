@@ -86,6 +86,12 @@ def normalize_content(raw):
                 entry['projectGroup'] = text_field(item, 'projectGroup', 40) or 'data-analysis'
                 if entry['projectGroup'] not in ('data-analysis', 'power-bi-development'):
                     raise ValueError('Choose a valid project type.')
+                entry['embedUrl'] = text_field(item, 'embedUrl', 2000)
+                if entry['embedUrl']:
+                    safe_url(entry['embedUrl'], True)
+                    parsed_embed = urlsplit(entry['embedUrl'])
+                    if parsed_embed.hostname != 'app.powerbi.com' or parsed_embed.path != '/view':
+                        raise ValueError('Use a public Power BI report URL from app.powerbi.com/view.')
                 tools = item.get('tools', [])
                 if not isinstance(tools, list) or len(tools) > 20 or any(not isinstance(t, str) or len(t) > 100 for t in tools):
                     raise ValueError('Please check the project tools.')

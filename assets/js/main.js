@@ -83,9 +83,10 @@
     const body = document.getElementById('project-dialog-content'); body.replaceChildren();
     if (project.image) { const image = node('img', 'case-study-image'); image.src = project.image; image.alt = project.title + ' dashboard'; body.append(image); }
     paragraphs(body, project.summary);
+    if (project.embedUrl) { const frame = document.createElement('iframe'); frame.className = 'project-report-embed'; frame.src = project.embedUrl; frame.title = project.title + ' interactive Power BI report'; frame.loading = 'lazy'; frame.allowFullscreen = true; frame.referrerPolicy = 'strict-origin-when-cross-origin'; body.append(frame); }
     [['Objective', project.challenge], ['Method', project.approach], ['Findings', project.insights]].forEach(([heading, copy]) => { if (copy) { body.append(node('h3', '', heading)); paragraphs(body, copy); } });
     const tags = node('div', 'tags'); project.tools.forEach(tool => tags.append(node('span', '', tool))); body.append(tags);
-    body.append(link('View repository on GitHub ↗', project.url, 'btn btn-primary project-source'));
+    body.append(link(project.embedUrl ? 'Open interactive report ↗' : 'View repository on GitHub ↗', project.embedUrl || project.url, 'btn btn-primary project-source'));
     projectDialog.showModal();
   }
   function projectCard(project, index) {

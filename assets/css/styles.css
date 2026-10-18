@@ -258,4 +258,5 @@ main:focus{outline:none}
 .project-group:hover:not([aria-pressed=true]){border-color:#9cacbf;color:var(--navy)}
 .project-group-description{margin:-5px 0 24px;color:var(--muted);font-size:13px;line-height:1.8}
 .project-collection .collection-bar{margin-bottom:14px}
-@media(max-width:640px){.experience-card{padding:22px}.experience-header{flex-direction:column;gap:8px}.experience-date{font-size:11px}.experience-summary{font-size:12px}.experience-highlights{font-size:11px;gap:10px}.project-groups{gap:7px;margin-bottom:19px}.project-group{padding:10px 13px;font-size:11px}.project-group-description{font-size:12px;margin-bottom:20px}}
+.project-report-embed{display:block;width:100%;aspect-ratio:600/373.5;min-height:360px;margin:24px 0;border:1px solid var(--line);border-radius:5px;background:var(--surface)}
+@media(max-width:640px){.experience-card{padding:22px}.experience-header{flex-direction:column;gap:8px}.experience-date{font-size:11px}.experience-summary{font-size:12px}.experience-highlights{font-size:11px;gap:10px}.project-groups{gap:7px;margin-bottom:19px}.project-group{padding:10px 13px;font-size:11px}.project-group-description{font-size:12px;margin-bottom:20px}.project-report-embed{min-height:280px;margin:18px 0}}
