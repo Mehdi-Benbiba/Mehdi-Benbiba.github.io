@@ -3,8 +3,8 @@ window.PORTFOLIO_CONTENT = {
   "revision": "619142f0-dd5d-40ad-8904-f6bd99da778a",
   "profile": {
     "name": "Mehdi Benbiba",
-    "role": "Junior BI & Data Analyst",
-    "intro": "I’m a BI Developer working on client projects in a consulting environment. My work includes Power BI reports, data models, and Microsoft Fabric pipelines.",
+    "role": "Business Intelligence Developer",
+    "intro": "I build Power BI reports and data models, and develop Microsoft Fabric pipelines that prepare business data for analysis.",
     "about": "I’m a BI Developer with a Master’s degree in Decision Engineering. I have hands-on experience delivering business intelligence solutions for international clients in a BI consulting environment.\n\nI work on sales and operational reporting, from data preparation and warehouse development to Power BI reports and role-based access.",
     "focus": "My current focus is data modeling, Microsoft Fabric, and end-to-end decision-support systems.",
     "currentWork": "Building Power BI reports and dashboards\nDeveloping dataflows and data pipelines with Microsoft Fabric\nWorking with data warehouses and analytical data models\nPreparing data with Power Query, SQL, Python, and PySpark\nAutomating Power BI data refreshes\nConnecting SharePoint, Salesforce, Odoo, and other business systems",
