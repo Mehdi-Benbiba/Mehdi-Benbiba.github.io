@@ -89,7 +89,7 @@
     projectDialog.showModal();
   }
   function projectCard(project, index) {
-    const button = node('button', 'project'); button.type = 'button'; button.dataset.project = project.id; button.dataset.category = project.category; button.setAttribute('aria-label', 'View ' + project.title + ' case study');
+    const button = node('button', 'project'); button.type = 'button'; button.dataset.project = project.id; button.dataset.category = project.category; button.dataset.group = project.projectGroup || 'data-analysis'; button.setAttribute('aria-label', 'View ' + project.title + ' case study');
     const art = node('div', 'project-art art-' + ['lavender', 'mint', 'peach'][index % 3]);
     if (project.image) { const image = node('img', 'project-cover'); image.src = project.image; image.alt = ''; image.loading = 'lazy'; art.append(image); }
     else { art.append(node('span', 'project-cover-symbol', '▥')); }
@@ -99,23 +99,56 @@
     const tags = node('div', 'tags'); project.tools.forEach(tool => tags.append(node('span', '', tool))); info.append(tags, node('span', 'card-action', 'View case study →')); button.append(art, info);
     button.addEventListener('click', () => openProject(project)); return button;
   }
-  document.querySelectorAll('[data-project-grid]').forEach(grid => {
-    const featured = grid.dataset.projectGrid === 'featured';
-    const items = featured ? content.projects.filter(p => p.featured).slice(0, 3) : content.projects;
+  document.querySelectorAll('[data-project-grid="featured"]').forEach(grid => {
+    const items = content.projects.filter(p => p.featured).slice(0, 3);
     grid.replaceChildren(); items.forEach((item, index) => grid.append(projectCard(item, index)));
     if (!items.length) grid.append(node('p', 'empty-state', 'No projects to display.'));
   });
   const filters = document.querySelector('[data-project-filters]');
-  if (filters) {
-    filters.replaceChildren();
-    ['All projects', ...new Set(content.projects.map(project => project.category))].forEach((label, i) => {
-      const button = node('button', 'filter', label); button.type = 'button'; button.setAttribute('aria-pressed', String(i === 0));
+  const groups = document.querySelector('[data-project-groups]');
+  const allGrid = document.querySelector('[data-project-grid="all"]');
+  if (filters && groups && allGrid) {
+    const groupDescription = document.querySelector('[data-project-group-description]');
+    const groupOptions = [
+      {id: 'data-analysis', label: 'Data Analysis', description: 'Projects centered on exploring a business question, preparing data, and explaining the findings.'},
+      {id: 'power-bi-development', label: 'Power BI Development', description: 'Projects centered on building Power BI reports, including data models, DAX, layout, and interactions.'}
+    ];
+    let activeGroup = 'data-analysis';
+    let activeCategory = 'All projects';
+    function renderProjectCards() {
+      const items = content.projects.filter(project => (project.projectGroup || 'data-analysis') === activeGroup && (activeCategory === 'All projects' || project.category === activeCategory));
+      allGrid.replaceChildren();
+      items.forEach((item, index) => allGrid.append(projectCard(item, index)));
+      if (!items.length) allGrid.append(node('p', 'empty-state', activeGroup === 'power-bi-development' ? 'Power BI development projects will appear here as they are added.' : 'No data analysis projects in this category yet.'));
+      document.getElementById('filter-status').textContent = items.length + ' projects shown';
+    }
+    function renderCategories() {
+      filters.replaceChildren();
+      const items = content.projects.filter(project => (project.projectGroup || 'data-analysis') === activeGroup);
+      const categories = ['All projects', ...new Set(items.map(project => project.category))];
+      filters.hidden = categories.length <= 1;
+      categories.forEach((label, index) => {
+        const button = node('button', 'filter', label); button.type = 'button'; button.setAttribute('aria-pressed', String(label === activeCategory));
+        button.addEventListener('click', () => {
+          activeCategory = label;
+          filters.querySelectorAll('button').forEach(other => other.setAttribute('aria-pressed', String(other === button)));
+          renderProjectCards();
+        });
+        filters.append(button);
+      });
+    }
+    groupOptions.forEach((option, index) => {
+      const button = node('button', 'project-group', option.label); button.type = 'button'; button.setAttribute('aria-pressed', String(index === 0));
       button.addEventListener('click', () => {
-        filters.querySelectorAll('button').forEach(other => other.setAttribute('aria-pressed', String(other === button)));
-        let count = 0; document.querySelectorAll('[data-project-grid="all"] .project').forEach(card => { card.hidden = i !== 0 && card.dataset.category !== label; if (!card.hidden) count++; });
-        document.getElementById('filter-status').textContent = count + ' projects shown';
-      }); filters.append(button);
+        activeGroup = option.id; activeCategory = 'All projects';
+        groups.querySelectorAll('button').forEach(other => other.setAttribute('aria-pressed', String(other === button)));
+        groupDescription.textContent = option.description;
+        renderCategories(); renderProjectCards();
+      });
+      groups.append(button);
     });
+    groupDescription.textContent = groupOptions[0].description;
+    renderCategories(); renderProjectCards();
   }
   document.querySelectorAll('[data-blog-grid]').forEach(grid => {
     const featured = grid.dataset.blogGrid === 'featured';

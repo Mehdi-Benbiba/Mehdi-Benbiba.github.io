@@ -23,8 +23,9 @@
   "projects": [
     {
       "id": "globotech-electronics",
+      "projectGroup": "data-analysis",
       "title": "GloboTech Electronics",
-      "category": "Sales analytics",
+      "category": "Sales Analysis",
       "summary": "Retail sales, customer behavior, and product profitability across stores and regions, 2016–2022.",
       "url": "https://github.com/Mehdi-Benbiba/GloboTech-Electronics",
       "featured": true,
@@ -40,8 +41,9 @@
     },
     {
       "id": "veracare-health",
+      "projectGroup": "data-analysis",
       "title": "VeraCare Health",
-      "category": "Marketing analytics",
+      "category": "Marketing Analysis",
       "summary": "Campaign performance and acquisition costs, with recommendations for marketing budget allocation.",
       "url": "https://github.com/Mehdi-Benbiba/VeraCare-Health-Marketing-Performance",
       "featured": true,
@@ -57,8 +59,9 @@
     },
     {
       "id": "power-electro",
+      "projectGroup": "data-analysis",
       "title": "Power Electro",
-      "category": "E-commerce analytics",
+      "category": "E-commerce Analysis",
       "summary": "E-commerce sales trends, product mix, loyalty, and marketing channels, 2019–2022.",
       "url": "https://github.com/Mehdi-Benbiba/Power-Electro-Analysis",
       "featured": true,

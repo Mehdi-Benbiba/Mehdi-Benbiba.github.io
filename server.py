@@ -83,6 +83,9 @@ def normalize_content(raw):
                     safe_url(image)
             entry['image'] = image
             if kind == 'projects':
+                entry['projectGroup'] = text_field(item, 'projectGroup', 40) or 'data-analysis'
+                if entry['projectGroup'] not in ('data-analysis', 'power-bi-development'):
+                    raise ValueError('Choose a valid project type.')
                 tools = item.get('tools', [])
                 if not isinstance(tools, list) or len(tools) > 20 or any(not isinstance(t, str) or len(t) > 100 for t in tools):
                     raise ValueError('Please check the project tools.')
