@@ -1,6 +1,6 @@
 window.PORTFOLIO_CONTENT = {
   "version": 1,
-  "revision": "5a36dc59-ea81-4a49-aac1-0555811c116d",
+  "revision": "dc65b62c-e86c-4543-9927-b7ebf6efa66c",
   "profile": {
     "name": "Mehdi Benbiba",
     "role": "Business Intelligence Developer",
@@ -85,7 +85,7 @@ window.PORTFOLIO_CONTENT = {
       "summary": "Interactive Power BI report for exploring retail sales, profit margin, order volume, and customer performance across regions and products.",
       "url": "https://app.powerbi.com/view?r=eyJrIjoiZjM4NTIyMzctOWM3Yi00YzJiLWFkZTQtMzEwMmU0MmY2ODNjIiwidCI6IjNjYzA1NTE2LWQ3NmEtNDI4Mi05N2NkLWI0N2RhNTNhODgyNiIsImMiOjF9",
       "featured": false,
-      "image": "",
+      "image": "assets/images/sales-overview.png",
       "projectGroup": "power-bi-development",
       "embedUrl": "https://app.powerbi.com/view?r=eyJrIjoiZjM4NTIyMzctOWM3Yi00YzJiLWFkZTQtMzEwMmU0MmY2ODNjIiwidCI6IjNjYzA1NTE2LWQ3NmEtNDI4Mi05N2NkLWI0N2RhNTNhODgyNiIsImMiOjF9",
       "tools": [
